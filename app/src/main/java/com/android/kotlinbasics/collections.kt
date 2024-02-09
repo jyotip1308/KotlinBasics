@@ -29,5 +29,10 @@ fun main(){
     map.putIfAbsent(4,"Radha")
     println(map)
 
+    val number = 2.65895
+    val formattedNumber = String.format("%.6f", number)
+
+    println(formattedNumber)
+
 }
 
