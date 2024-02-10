@@ -1,15 +1,16 @@
 package com.android.kotlinbasics
 
+
 fun main(){
-    val a = intArrayOf(2,3,4,5,0,6,-1,-3,-39)
-    val s = a.size
+    val arr = intArrayOf(2,3,4,5,0,6,-1,-3,-39)
+    val s = arr.size
     println(s)
 
     var positive = 0
     var negative = 0
     var zero = 0
 
-    for (i in a) {
+    for (i in arr) {
         when {
             i > 0 -> positive++
             i < 0 -> negative++
