@@ -2,6 +2,7 @@ package com.android.kotlinbasics
 
 fun main(){
 
+
     val mutableList = mutableListOf(1,2,3,4,5,4,6);
     val list = listOf(58,900)
     mutableList.remove(4)  //only one element will be removed

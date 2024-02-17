@@ -2,8 +2,8 @@ package com.android.kotlinbasics
 
 fun main(){
     val a = mData.a
-    var max = a[0]
-    var min = a[0]
+    val max = a[0]
+    val min = a[0]
     var maxsum = 0
     var minsum = 0
     var counter = 0
