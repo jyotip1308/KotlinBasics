@@ -1,5 +1,11 @@
 package com.android.kotlinbasics
 
+import android.os.Build
+import android.util.Log
+import java.time.Duration
+import java.time.LocalTime
+import java.time.format.DateTimeFormatter
+
 fun main(){
 //    kotlin()
 
@@ -13,7 +19,30 @@ fun main(){
 
     println(checkAge(age(1)))*/
 
-    trailingLambda("Hello world"){
+    val currentTime = LocalTime.now()
+   
+    println("READING 3 ADD TASK: " + "Adding Data")
+    
+    // Format the current time as "hh:mm a" (12-hour clock with AM/PM)
+    var time = currentTime.format(DateTimeFormatter.ofPattern("hh:mm a"))
+    time = time.replace("am", "AM").replace("pm", "PM")
+
+    println("TIME" + "Current time: $time")
+
+    val time1 = LocalTime.parse(time, DateTimeFormatter.ofPattern("hh:mm a"))
+
+    println("TIME 2" + "Current time: $time1")
+//    println("TIME 3","server time: ${mainViewModel.MASTERDATA.value?.shift_timings?.get(0)?.lunch_start.toString().trim()}")
+
+    val time2 = LocalTime.parse("12:00 pm", DateTimeFormatter.ofPattern("hh:mm a"))
+
+    // Calculate difference in minutes
+    val duration = Duration.between(time1, time2)
+    val differenceInMinutes = duration.toMinutes()
+    println("TIME DIFF: " + "Time difference: $differenceInMinutes minutes")
+
+    }
+   /* trailingLambda("Hello world"){
         sum(3,5)
     }
 
@@ -23,8 +52,8 @@ fun main(){
         sum(3,5)
         //print(it) --> this statement will cause error as last statement is always returned
                         // and here print(it) is not returning required Integer
-    }
-}
+    }*/
+
 
 fun kotlin(){
       val x = 20
